@@ -9,3 +9,5 @@
 - $ python3 -m pip install --upgrade pip
 - $ pip install django~=1.11.
 - $ pip install whitenoise
+- $ python manage.py runserver
+- you are done just open the url in your browser 
