@@ -1,9 +1,60 @@
-{% extends 'blog/base.html' %}
+{% load staticfiles %}
 
-{% block content %}
-    <h1>Question here</h1>
-    <form method="POST" class="post-form">{% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit" class="save btn btn-default">Save</button>
-    </form>
-{% endblock %}
+<html>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+<link rel="stylesheet" href="{% static 'css/new.css' %}">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+
+<nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo"><img class="img" src="../images/bakeshop.png"></a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="/question">View all questions</a></li>
+        <li><a href="/">Dashboard</a></li>
+        <li><a href="">Blank</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+<body>
+	<div class="card  orange darken-1">
+        <div class="card-content white-text">
+          <span class="card-title">So what's your question today?</span>
+
+
+          <h1>Question here</h1>
+          <form method="POST" class="post-form">{% csrf_token %}
+              {{ form.as_p }}
+              <button type="submit" class="save btn btn-default">Save</button>
+          </form>
+		</div>
+	</div>
+
+ <footer class="page-footer">
+          <div class="container">
+            <div class="row">
+				<img src="../images/bakeshop.png">
+              <div class="col l6 s12">
+
+                <h5 class="white-text">Footer Content</h5>
+                <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Links</h5>
+
+              </div>
+				<div class="col l2 offset-l2 s12">
+                <h5 class="white-text">Links</h5>
+
+              </div>
+            </div>
+          </div>
+
+        </footer>
+	</body>
+  </html>

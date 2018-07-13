@@ -10,6 +10,9 @@ import json as simplejson
 import time
 from django.contrib.auth import login, authenticate
 
+def home(request):
+    return render(request, 'blog/home.html', {})
+
 def post_list(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
     return render(request, 'blog/post_list.html', {'posts': posts})
@@ -67,7 +70,7 @@ def pwa_make(request):
         form = PWAForm(request.POST)
         if form.is_valid():
             pwa = form.save(commit=False)
-            
+
             pwa.save()
             return pwa_add_to_json(request, pk=pwa.pk)
     else:
@@ -95,7 +98,7 @@ def post_edit(request, pk):
         if form.is_valid():
             post = form.save(commit=False)
             post.author = request.user
-            
+
             post.save()
             return redirect('post_detail', pk=post.pk)
     else:
@@ -105,7 +108,7 @@ def post_edit(request, pk):
 @login_required
 def post_draft_list(request):
     posts = Post.objects.filter(published_date__isnull=True).order_by('created_date')
-    return render(request, 'blog/post_draft_list.html', {'posts': posts})  
+    return render(request, 'blog/post_draft_list.html', {'posts': posts})
 
 @login_required
 def post_publish(request, pk):
