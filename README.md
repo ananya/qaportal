@@ -1,5 +1,5 @@
 # QA-portal
-It is a question-answer portal made by Ananya Aggarwal.
+This is a Question-Answer application.
 Follow the steps given below to start this project--
 
 - Clone the project
@@ -13,3 +13,6 @@ Follow the steps given below to start this project--
 - $ pip install whitenoise
 - $ python manage.py runserver
 - You are done! Just open the url in your browser 
+
+# Author
+Ananya-Agarwal
