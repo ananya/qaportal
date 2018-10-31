@@ -1,4 +1,5 @@
 # QA-portal
+This is a Question-Answer application.
 Follow the steps given below to start this project--
 
 - Clone the project
