@@ -1,4 +1,5 @@
-# qaportal
+# QA-portal
+Follow the steps given below to start this project--
 
 - clone the project
 - navigate to project directory
