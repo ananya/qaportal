@@ -12,8 +12,7 @@ Follow the steps given below to start this project--
 - $ pip install django~=1.11
 - $ pip install whitenoise
 - $ python manage.py runserver
-- You are done! Just open the url in your browser 
+- You are done! Just open the url in your browser and Enjoy the game.
 
 # Author
-Ananya-Agarwal
-Gautham-Santosh :p
+Ananya-Agrawal
